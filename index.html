@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#82d5c2" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>Ellia's First Words</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">🐻</span><div><small>ELLIA'S LITTLE WORLD</small><strong>First Words!</strong></div></div>
+      <div class="top-actions"><button class="sound-toggle" id="soundToggle" aria-label="Sound on">🔊 <span>Sound</span></button><button class="parent-toggle" id="parentToggle" aria-label="Grown-ups">⚙️</button></div>
+    </header>
+    <section class="welcome" id="home">
+      <div class="greeting"><span class="sun">☀️</span><div><h1>Hi, Ellia!</h1><p>Tap a picture. Let's say it together!</p><button class="start-button" id="startButton"><span>▶</span> Let's play!</button></div></div>
+      <div class="bear-scene" aria-hidden="true"><span class="cloud c1">☁️</span><span class="cloud c2">☁️</span><span class="bear">🐻</span><span class="speech-bubble">Hello! <span>👋</span></span><span class="flower f1">🌼</span><span class="flower f2">🌷</span></div>
+    </section>
+    <nav class="category-tabs" aria-label="Word groups">
+      <button class="category active" data-category="animals"><span>🐾</span> Animals</button><button class="category" data-category="things"><span>🧸</span> Things</button><button class="category" data-category="sounds"><span>🎵</span> Sounds</button>
+    </nav>
+    <section class="play-area" aria-live="polite">
+      <div class="prompt-row"><div><span class="tiny-label" id="roundLabel">LET'S FIND</span><h2 id="prompt">Can you find the dog?</h2></div><button class="repeat-button" id="repeatButton" aria-label="Hear the question again"><span>🔊</span><small>Listen</small></button></div>
+      <div class="word-grid" id="wordGrid"></div><div class="encouragement" id="encouragement"><span>✨</span> Tap any picture to hear its name!</div>
+      <div class="progress-row"><div class="stars" id="stars" aria-label="Stars earned">⭐ 0</div><div class="dots" id="dots" aria-label="Round progress"></div><button class="next-button" id="nextButton" aria-label="Next round">→</button></div>
+    </section>
+    <section class="parent-panel hidden" id="parentPanel" aria-label="Grown-up settings"><button class="panel-close" id="panelClose" aria-label="Close">×</button><span class="tiny-label">GROWN-UPS</span><h2>Ellia's playtime</h2><p>Short, happy turns work best. Follow Ellia's interest and celebrate every try.</p><div class="parent-stats"><div><strong id="parentStars">0</strong><small>happy stars</small></div><div><strong id="parentRounds">0</strong><small>rounds played</small></div></div><p class="privacy">This iPad keeps progress on this device. No account or microphone needed.</p><button class="reset-button" id="resetButton">Start over</button></section>
+    <footer>Little words, big adventures <span>💛</span></footer>
+  </main>
+  <div class="celebration hidden" id="celebration" aria-hidden="true"><div class="celebration-card"><span class="celebration-emoji">🌟</span><strong>Yay, Ellia!</strong><span>Let's play again!</span></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
